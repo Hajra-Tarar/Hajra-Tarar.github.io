@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-serif: 'Libre Baskerville', serif;
+}
+
+/* DARK MODE DEFAULT - High Contrast Tweaks */
+:root {
+  --background: 240 10% 5%; /* Slightly lighter than pure black for depth */
+  --foreground: 0 0% 100%; /* Pure white for max contrast */
+
+  --card: 240 12% 10%; /* Lighter card background to distinguish from body */
+  --card-foreground: 0 0% 100%;
+
+  --popover: 240 10% 5%;
+  --popover-foreground: 0 0% 100%;
+
+  --primary: 263 80% 65%; /* Lighter, more vibrant purple for better readability */
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 240 6% 20%; /* Lighter secondary for visibility */
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 240 6% 20%;
+  --muted-foreground: 215 15% 80%; /* Much lighter grey for readability */
+
+  --accent: 263 80% 65%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 240 6% 20%; /* More visible borders */
+  --input: 240 6% 20%;
+  --ring: 263 80% 65%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 50% 0%, hsl(263 70% 50% / 0.1), transparent 40%),
+      radial-gradient(circle at 0% 50%, hsl(180 70% 50% / 0.03), transparent 40%),
+      radial-gradient(circle at 100% 50%, hsl(300 70% 50% / 0.03), transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  .prose-content p {
+    @apply leading-8 text-lg md:text-xl text-muted-foreground mb-6 font-light tracking-wide;
+  }
+}

@@ -1,0 +1,42 @@
+Create an interactive, scroll-based portfolio website with the following structure and design requirements:
+Overall Style
+* Modern, minimalistic, and visually appealing UI/UX.
+* Smooth scrolling transitions between sections.
+* Use soft animations (fade-in, slide-in, parallax, or slight movement on scroll).
+* Cohesive color palette, consistent typography, and spacious layout.
+
+Section 1: Hero / Landing Section
+* Header text: “Vibe Coding”
+* Tagline: A placeholder tagline that represents “a journey of exploration through creating, reflecting, and designing projects with AI.”
+* Center the text vertically and horizontally with a bold hero layout.
+* Add subtle animated background or gradient for visual depth.
+
+Section 2: My Perspective on AI as a Creative Partner
+* Create a two-part article-style layout:
+    * Part 1: “6 Weeks Ago” — placeholder text
+    * Part 2: “Now” — placeholder text
+* Layout should resemble a clean digital article: wide margins, readable typography, subtle section dividers, and smooth fade-in on scroll.
+* Each part should appear as the user scrolls downward.
+
+Section 3: My Projects (Interactive Zigzag Path)
+* Create a visually appealing zigzag path or timeline down the page.
+* Three points along the path.
+* Each point should:
+    * Be clickable or hoverable.
+    * Expand, reveal, or pop up a project preview card (use placeholder text + placeholder image).
+    * Include micro-interactions (glow on hover, slight scale-up, etc.)
+* Ensure this section feels playful and creative, matching the “Vibe Coding” theme.
+
+Section 4: Reflection Section
+* Title: “Reflection on the Reading”
+* Add a placeholder area for the reflection text.
+* Clean, thoughtful layout—soft background, card-style container, or column layout.
+
+Technical Requirements
+* Use responsive design for mobile, tablet, and desktop.
+* Include smooth scroll animations.
+* Use HTML, CSS (Tailwind optional), and JavaScript/React (if needed).
+* Create clear component/section structure for easy editing later.
+
+Goal
+Produce a complete, aesthetically polished webpage that matches modern portfolio design standards, supports smooth interactions, and leaves room for me to fill in the text later.
